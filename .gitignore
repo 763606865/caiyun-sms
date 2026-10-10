@@ -1,0 +1,10 @@
+/vendor/
+/composer.lock
+/.idea/
+/.phpunit.cache/
+/.phpunit.result.cache
+/.phpstan.cache/
+/.env
+/.env.*
+!/.env.example
+.DS_Store

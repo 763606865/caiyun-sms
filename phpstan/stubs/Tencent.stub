@@ -1,0 +1,10 @@
+<?php
+
+namespace TencentCloud\Sms\V20210111\Models;
+
+// RequestId stays null when it is absent from the deserialized response.
+class SendSmsResponse
+{
+    /** @var string|null */
+    public $RequestId;
+}

@@ -1,0 +1,88 @@
+{
+    "name": "caiyun/sms",
+    "description": "Multi-driver SMS package for Laravel supporting Aliyun, Tencent, Huawei, Volcengine and Cloopen.",
+    "keywords": ["sms", "laravel", "aliyun", "tencent", "huawei", "volcengine", "cloopen", "caiyun"],
+    "homepage": "https://github.com/763606865/caiyun-sms",
+    "type": "library",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/763606865/caiyun-sms/issues",
+        "source": "https://github.com/763606865/caiyun-sms"
+    },
+    "require": {
+        "php": "^8.3",
+        "ext-hash": "*",
+        "ext-json": "*",
+        "alibabacloud/dysmsapi-20170525": "^4.0",
+        "guzzlehttp/guzzle": "^7.0",
+        "guzzlehttp/psr7": "^2.0",
+        "illuminate/contracts": "^13.0",
+        "illuminate/log": "^13.0",
+        "illuminate/support": "^13.0",
+        "tencentcloud/sms": "^3.0"
+    },
+    "require-dev": {
+        "larastan/larastan": "^3.0",
+        "laravel/pint": "^1.29.3",
+        "mockery/mockery": "^1.6",
+        "orchestra/testbench": "^11.0",
+        "phpstan/phpstan": "^2.1",
+        "phpstan/phpstan-mockery": "^2.0",
+        "phpstan/phpstan-phpunit": "^2.0",
+        "phpunit/phpunit": "^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Caiyun\\Sms\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Caiyun\\Sms\\Tests\\": "tests/"
+        }
+    },
+    "archive": {
+        "exclude": [
+            "/.env*",
+            "/.gitattributes",
+            "/.github",
+            "/.gitignore",
+            "/.idea",
+            "/.phpunit.cache",
+            "/.phpunit.result.cache",
+            "/.phpstan.cache",
+            "/composer.lock",
+            "/phpunit.xml.dist",
+            "/phpstan.neon.dist",
+            "/phpstan",
+            "/pint.json",
+            "/scripts",
+            "/tests",
+            "/vendor"
+        ]
+    },
+    "scripts": {
+        "lint": "@php scripts/lint.php",
+        "pint": "@php vendor/bin/pint --test src config scripts tests",
+        "pint:fix": "@php vendor/bin/pint src config scripts tests",
+        "phpstan": "@php vendor/bin/phpstan analyse --no-progress --memory-limit=512M",
+        "test": "@php vendor/bin/phpunit",
+        "check": ["@composer validate --strict", "@lint", "@pint", "@phpstan", "@test"]
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "1.0.x-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Caiyun\\Sms\\SmsServiceProvider"
+            ],
+            "aliases": {
+                "Sms": "Caiyun\\Sms\\Facades\\Sms"
+            }
+        }
+    }
+}

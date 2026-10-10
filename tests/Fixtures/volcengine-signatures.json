@@ -1,0 +1,29 @@
+{
+    "standard": {
+        "url": "https://sms.volcengineapi.com/?Action=SendSms&Version=2020-01-01",
+        "body": "{\"SmsAccount\":\"sms-account\",\"Sign\":\"测试签名\",\"TemplateID\":\"ST_123\",\"PhoneNumbers\":\"13800138000\",\"TemplateParam\":\"{\\\"code\\\":\\\"123456\\\"}\"}",
+        "region": "cn-north-1",
+        "security_token": "",
+        "date": "2026-10-10T08:00:00Z",
+        "authorization": "HMAC-SHA256 Credential=test-access-key/20261010/cn-north-1/volcSMS/request, SignedHeaders=host;x-content-sha256;x-date, Signature=f2d06baf3c0cff093ee6ca4a5d2b5e9c337bee94ea37af76dd681208522f8011",
+        "payload_hash": "f0461f6f26c8c256b24407beae6cd74fab793660e5f5f35759dbd3e0e6db9c9d"
+    },
+    "sts": {
+        "url": "https://sms.volcengineapi.com/?Action=SendSms&Version=2020-01-01",
+        "body": "{\"SmsAccount\":\"sms-account\",\"Sign\":\"测试签名\",\"TemplateID\":\"ST_123\",\"PhoneNumbers\":\"13800138000\",\"TemplateParam\":\"{\\\"code\\\":\\\"123456\\\"}\"}",
+        "region": "cn-north-1",
+        "security_token": "test-security-token",
+        "date": "2026-10-10T08:00:00Z",
+        "authorization": "HMAC-SHA256 Credential=test-access-key/20261010/cn-north-1/volcSMS/request, SignedHeaders=host;x-content-sha256;x-date;x-security-token, Signature=c582c84ef1383e8b684a9647145479ecb8faa42ef7f297ba716fc90bf169beb1",
+        "payload_hash": "f0461f6f26c8c256b24407beae6cd74fab793660e5f5f35759dbd3e0e6db9c9d"
+    },
+    "custom endpoint and region": {
+        "url": "https://sms.example.com:8443/?Version=2020-01-01&Action=SendSms",
+        "body": "{\"SmsAccount\":\"sms-account\",\"Sign\":\"测试签名\",\"TemplateID\":\"ST_123\",\"PhoneNumbers\":\"13800138000\",\"TemplateParam\":\"{\\\"code\\\":\\\"123456\\\"}\"}",
+        "region": "cn-beijing",
+        "security_token": "",
+        "date": "2026-10-10T08:00:00Z",
+        "authorization": "HMAC-SHA256 Credential=test-access-key/20261010/cn-beijing/volcSMS/request, SignedHeaders=host;x-content-sha256;x-date, Signature=cb77b6b1e11f5e54265eb29004c9824246015e396544944103e6841ce2984c24",
+        "payload_hash": "f0461f6f26c8c256b24407beae6cd74fab793660e5f5f35759dbd3e0e6db9c9d"
+    }
+}

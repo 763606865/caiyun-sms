@@ -1,0 +1,19 @@
+<?php
+
+namespace AlibabaCloud\SDK\Dysmsapi\V20170525\Models;
+
+// The generated SDK leaves these properties null until the response fills them.
+class SendSmsResponseBody
+{
+    /** @var string|null */
+    public $bizId;
+
+    /** @var string|null */
+    public $code;
+
+    /** @var string|null */
+    public $message;
+
+    /** @var string|null */
+    public $requestId;
+}

@@ -1,0 +1,21 @@
+includes:
+    - vendor/larastan/larastan/extension.neon
+    - vendor/nesbot/carbon/extension.neon
+    - vendor/phpstan/phpstan-phpunit/extension.neon
+    - vendor/phpstan/phpstan-phpunit/rules.neon
+    - vendor/phpstan/phpstan-mockery/extension.neon
+
+parameters:
+    level: 8
+    phpVersion: 80300
+    paths:
+        - src
+        - config
+        - scripts
+        - tests
+    configDirectories:
+        - config
+    stubFiles:
+        - phpstan/stubs/Aliyun.stub
+        - phpstan/stubs/Tencent.stub
+    tmpDir: .phpstan.cache
